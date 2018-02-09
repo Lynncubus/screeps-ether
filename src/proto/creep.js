@@ -1,7 +1,4 @@
-const roles = {
-	harvester: require('role.harvester'),
-	carrier: require('role.carrier')
-}
+const roles = require('roles').roles
 
 Creep.prototype.runRole = function() {
 	if (this.spawning) return

@@ -1,35 +1,9 @@
 
 const body = require('body')
+const roles = require('roles').roles
+const roleList = require('roles').roleList
 
-const roleList = [ // put them in order of most importance
-	'carrier',
-	'harvester'
-]
-
-const roleBalance = [ // WIP
-	// the balance of creep roles
-	// This is based around the amount of available creeps and their roles. 
-	// A higher number (max: 1) means a higher importance of that creep.
-
-	{ role: 'harvester', value: 1 },
-	{ role: 'carrier', value: 1 }
-]
-
-const roles = {
-	harvester: require('role.harvester'),
-	carrier: require('role.carrier')
-}
-
-function genName(prefix) {
-	let id = 1
-	while (true) {
-		if (Game.creeps[prefix + '_' + id]) {
-			id++
-		} else {
-			return prefix + '_' + id
-		}
-	}
-}
+const genName = require('util').genName
 
 Spawn.prototype.spawnCreeps = function () {
 	for (let role of roleList) {

@@ -1,6 +1,5 @@
-function arrayAdd(arr, value, amount) {
-	for (var i = 0; i < amount; i++) arr.push(value)
-}
+const util = require('util')
+const arrayAdd = util.arrayAdd
 
 function defaultLoadout(loadout) {
 	return Object.assign({

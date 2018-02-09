@@ -23,6 +23,19 @@ Build and upload: `npm run build` or `gulp`
 	In preperation for future we need to be able to build tiers from cheap too expensive.
 
 - towers
-- caching basic stuff like my own creeps in a room.
+- Auto path building
+
+	To improve efficiency in swampy areas we want to construct pathways from important objects to resources
+
+- Caching basic stuff like my own creeps in a room.
 
 	At this point we've been doing stuff like Room.find, which can be cpu expensive on every call. A simple loop over all the rooms with some basic stuff like Room.myScreeps would simplify and lower cpu cost
+
+- Cache paths to resources
+	- In combinations with the path building
+
+- Create concept for a manager that will manage everything from construction to energy sharing
+	- One core manager under `Game.manager`
+	- Has a memory slot under `Memory.manager`
+	- Has sub modules based on the type of management
+		- These have a memory slot under `Memory.manager.modules[module]`

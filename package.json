@@ -1,0 +1,21 @@
+{
+  "name": "screeps-ether",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI for the programmable MMO, Screeps",
+  "dependencies": {},
+  "devDependencies": {
+    "del": "^3.0.0",
+    "dotenv": "^5.0.0",
+    "gulp": "github:gulpjs/gulp",
+    "gulp-babel": "^7.0.1",
+    "gulp-debug": "^3.2.0",
+    "gulp-screeps": "^1.0.8",
+    "through2": "^2.0.3"
+  },
+  "scripts": {
+    "build": "gulp"
+  },
+  "author": "Luxizzle",
+  "license": "MIT"
+}

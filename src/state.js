@@ -7,7 +7,6 @@ class State {
 		let startState = this._logic.find((state) => state.start ) || this._logic[0].name
 
 		// Initialize memory
-		
 		this.memory = _.assign({
 			state: startState.name
 		}, this.memory)
@@ -17,10 +16,6 @@ class State {
 	// This makes writing memory a lot easier
 	get memory() { return this.source.memory.state }
 	set memory(m) { this.source.memory.state = m }
-
-	/**
-	 * Save memory into the source
-	 */
 
 	run() {
 		// update memory
@@ -33,20 +28,6 @@ class State {
 		this.memory = memory
 
 		this.draw()
-
-		/*
-		if (this.source.say && this.memory.state !== oldState) { //  if its a creep, announce its new state
-			console.log(`[${this.source.name}] new state: ${this.memory.state}`)
-		}
-
-		
-		if (this.memory.now) { 
-			// sometimes a state fails immediatly and it has done nothing this tick.
-			// This would be a waste, so with if now = true, we know it can do another run
-			this.memory.now = false
-			this.run()
-		}
-		*/
 	}
 
 	/**

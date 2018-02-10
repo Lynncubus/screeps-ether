@@ -39,3 +39,8 @@ Build and upload: `npm run build` or `gulp`
 	- Has a memory slot under `Memory.manager`
 	- Has sub modules based on the type of management
 		- These have a memory slot under `Memory.manager.modules[module]`
+
+- Body sorting
+
+	To make creeps more tougher, we should create a way to sort body parts on importance and logic.
+	If a creep is unable to do its job due to lost body parts, kill it.

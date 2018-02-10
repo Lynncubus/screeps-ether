@@ -21,11 +21,7 @@ const logic = [
 
 			if ( source.energy > 0 ) {
 				creep.harvest(source)
-			}/* else { 
-				memory.source = null
-				memory.state = 'moving'	
 			}
-			*/
 		}
 	}
 ]

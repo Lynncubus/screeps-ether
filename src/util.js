@@ -1,10 +1,13 @@
 
+Memory.util = Memory.util || {}
+var util = {}
+
 // Adds `value` `amount` times in `arr`
-module.exports.arrayAdd = function(arr, value, amount) {
+util.arrayAdd = function(arr, value, amount) {
 	for (var i = 0; i < amount; i++) arr.push(value)
 }
 
-module.exports.genName = function(prefix) {
+util.genName = function(prefix) {
 	let id = 1
 	while (true) {
 		if (Game.creeps[prefix + '_' + id]) {
@@ -14,3 +17,9 @@ module.exports.genName = function(prefix) {
 		}
 	}
 }
+
+Memory.util.counter = Memory.util.counter || 0
+util.uniqueId = () => (Memory.util.counter++).toString(16)
+
+Game.util = util
+module.exports = util

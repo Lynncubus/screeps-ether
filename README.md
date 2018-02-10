@@ -44,3 +44,11 @@ Build and upload: `npm run build` or `gulp`
 
 	To make creeps more tougher, we should create a way to sort body parts on importance and logic.
 	If a creep is unable to do its job due to lost body parts, kill it.
+
+- Memory optimization
+
+	Im not sure how memory is managed but from what i understand from the docs is that every time you call from Memory it gets parsed from and to json, which is cpu expensive.
+
+	To fix this issue there will be memory proxy which acts in place of the original memory. At the starting tick we will initialize this proxy and at the end we will save it.
+
+	This will only create 1 get and 1 set request, thus way less json parsing and stringifying.

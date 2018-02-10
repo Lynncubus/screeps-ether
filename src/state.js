@@ -1,4 +1,3 @@
-
 class State {
 	constructor(source, logic) {
 		this._logic = logic

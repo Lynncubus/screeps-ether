@@ -29,7 +29,7 @@ Creep.prototype.moveTo = function(target, opts = {}) {
 			fill: 'transparent',
 			stroke: '#fff',
 			lineStyle: 'dashed',
-			strokeWidth: .15,
+			strokeWidth: .1,
 			opacity: .1
 		}
 	}, opts))

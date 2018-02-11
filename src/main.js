@@ -1,4 +1,5 @@
 require('init')
+const manager = require('manager')
 
 module.exports.loop = function() {
 	// clean creep memory
@@ -7,6 +8,8 @@ module.exports.loop = function() {
 				delete Memory.creeps[name];
 		}
 	}
+
+	manager.tick()
 
 	for (let name in Game.creeps) {
 		// run creep logic

@@ -31,11 +31,14 @@ class ManagerModule extends ManagerBase {
 	 */
 	newTask(type, pos, priority = 1) {
 		const id = util.uniqueId()
+
 		
-		let task = { 
+		
+		let task = {
 			type,
 			pos: pos.serialize(),
-			id 
+			id,
+			priority
 		}
 
 		let tasks = this.tasks

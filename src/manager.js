@@ -9,6 +9,12 @@ class Manager {
 		}
 	}
 
+	tick() {
+		for (let name in this.modules) {
+			this.modules[name].tick()
+		}
+	}
+
 	get memory() { return Memory.manager.core }
 	set memory(m) { Memory.manager.core = m }
 }

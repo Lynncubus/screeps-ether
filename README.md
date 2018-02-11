@@ -52,3 +52,9 @@ Build and upload: `npm run build` or `gulp`
 	To fix this issue there will be memory proxy which acts in place of the original memory. At the starting tick we will initialize this proxy and at the end we will save it.
 
 	This will only create 1 get and 1 set request, thus way less json parsing and stringifying.
+
+- Move creep loop to Room.creeps instead of Game.creeps
+
+	In combination with the caching. And moving creeps to their rooms will allow us to get insight into cpu usage per room
+
+- Implement custom NBA pathfinding with caching and area waypoints
